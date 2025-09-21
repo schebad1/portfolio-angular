@@ -1,0 +1,165 @@
+@media screen and (max-width: 1280px) {
+  .headline-content {
+    font-size: 40px;
+  }
+
+  .hero-background {
+    margin-top: 100px;
+  }
+
+  .headline-title {
+    font-weight: 700;
+    font-size: 60px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .hero-shadows {
+    > #shadow-purple {
+      left: 12vw;
+    }
+  }
+
+  .hero-background {
+    margin-top: 100px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .hero-image-container {
+    justify-content: center;
+    flex: initial;
+    display: flex;
+    height: calc(100% - 80px);
+    align-content: initial;
+
+    > .hero-image {
+      height: 100%;
+      object-fit: cover;
+      left: 0;
+    }
+  }
+
+  .email-address {
+    display: none;
+  }
+
+  .headline-wrapper {
+    flex: 1;
+    align-items: center;
+  }
+
+  .hero-background {
+    margin-top: 0;
+    margin-bottom: 320px;
+  }
+
+  .hero-section {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100svh;
+  }
+
+  .hero-shadows {
+    padding-top: 28px;
+
+    > #shadow-purple {
+      left: 6vw;
+    }
+
+    > #shadow-green {
+      right: 4vw;
+    }
+  }
+
+  .social-links {
+    justify-content: center;
+    position: relative;
+    width: calc(50% + 46px);
+    margin-top: 30px;
+    bottom: -10px;
+
+    > a {
+      z-index: 1;
+      position: relative;
+      background: rgb(20, 29, 47);
+    }
+  }
+
+  main {
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    height: calc(100svh - 200px);
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .headline-title {
+    font-size: 60px;
+  }
+
+  .headline-content {
+    font-size: 35px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .headline-wrapper {
+    gap: 12px;
+  }
+
+  .headline-title {
+    font-size: 44px;
+  }
+
+  .hero-background {
+    margin-bottom: 240px;
+  }
+
+  .headline-content {
+    font-size: 26px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .hero-shadows {
+    padding-top: 88px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .headline-title {
+    font-size: 37px;
+  }
+
+  .headline-content {
+    font-size: 24px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .hero-background {
+    left: -30vw;
+    width: 125vw;
+  }
+
+  .divider-line {
+    position: static;
+    width: 28vw;
+  }
+
+  .hero-image-container {
+    max-width: inherit;
+
+    > .hero-image {
+      left: 4vw;
+    }
+  }
+
+  .hero-shadows {
+    left: -4vw;
+  }
+}

@@ -1,0 +1,32 @@
+app-atf,
+app-about-me,
+app-skills,
+app-portfolio,
+app-references,
+app-contact {
+  position: relative;
+  z-index: 1;
+}
+
+.section-anchor {
+  scroll-margin-top: 135px;
+}
+
+.main-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 54px;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 1000px) {
+  .section-anchor {
+    scroll-margin-top: 80px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  app-atf {
+    align-self: center;
+  }
+}

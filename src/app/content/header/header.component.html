@@ -1,0 +1,56 @@
+<header>
+  <div class="wrapper max-size">
+    <a routerLink="" (click)="scrollToTopAction()">
+      <h2>Scheker</h2>
+    </a>
+    <nav>
+      <a href="#about-me">{{ 'aboutMe.title' | translate }}</a>
+      <a href="#skills">{{ 'skills.title' | translate }}</a>
+      <a href="#portfolio">Portfolio</a>
+      <div class="row-block">
+        <button
+          (click)="setLanguageAction('de')"
+          [class.text-underline]="currentLang == 'de'">
+          DE
+        </button>
+        <div class="split-line"></div>
+        <button
+          (click)="setLanguageAction('en')"
+          [class.text-underline]="currentLang == 'en'">
+          EN
+        </button>
+      </div>
+    </nav>
+    <div class="nav-toggle-icon" [class.expanded]="isOpen">
+      <svg
+        (click)="switchMenuState()"
+        width="40"
+        height="30"
+        viewBox="0 0 40 30">
+        <line x1="5" y1="7"  x2="35" y2="7"  class="line top"></line>
+        <line x1="5" y1="15" x2="35" y2="15" class="line middle"></line>
+        <line x1="5" y1="23" x2="35" y2="23" class="line bottom"></line>
+      </svg>
+    </div>
+  </div>
+</header>
+<main [class.expand-height]="isOpen">
+  <nav [class.expanded]="isOpen">
+    <a (click)="switchMenuState()" href="#about-me">{{ 'aboutMe.title' | translate }}</a>
+    <a (click)="switchMenuState()" href="#skills">{{ 'skills.title' | translate }}</a>
+    <a (click)="switchMenuState()" href="#portfolio">Portfolio</a>
+    <div class="lang-switcher">
+      <button
+        (click)="setLanguageAction('de'); switchMenuState()"
+        [class.text-underline]="currentLang == 'de'">
+        de
+      </button>
+      <div class="split-line"></div>
+      <button
+        (click)="setLanguageAction('en'); switchMenuState()"
+        [class.text-underline]="currentLang == 'en'">
+        en
+      </button>
+    </div>
+  </nav>
+</main>

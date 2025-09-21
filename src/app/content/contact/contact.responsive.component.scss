@@ -1,0 +1,52 @@
+@media screen and (max-width: 1280px) {
+  .contact-line {
+    position: relative; 
+    top: 33.5px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .contact-wrapper {
+    height: unset;
+    padding: 0 48px 32px;
+    align-items: flex-start;
+  }
+
+  .contact-heading {
+    padding: 2px;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    margin: 34px 0;
+  }
+
+  .contact-line {
+    width: 25%;
+  }
+
+  .contact-info,
+  .contact-form-wrapper {
+    width: 100%;
+  }
+
+  .contact-decoration {
+    height: 48vh;
+    width: 62vw;
+
+    > img {
+      width: 200%;
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .contact-decoration {
+    height: 26vh;
+    width: 48vw;
+  }
+
+  .contact-wrapper {
+    padding: 0 16px 32px;
+  }
+}

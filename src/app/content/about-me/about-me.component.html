@@ -1,0 +1,88 @@
+<main>
+  <div class="aboutme-wrapper max-width">
+    <section class="aboutme-content column gap-large">
+      <h2
+        data-aos="flip-up"
+        data-aos-delay="150"
+        [attr.data-aos-anchor]="'#aboutme-anchor'"
+      >
+        {{ "aboutMe.title" | translate }}
+      </h2>
+      <div class="column gap-medium">
+        <p
+          id="aboutme-description-main"
+          data-aos="fade"
+          data-aos-delay="150"
+          [attr.data-aos-anchor]="'#aboutme-anchor'"
+        >
+          {{ "aboutMe.description" | translate }}
+        </p>
+        <div class="column gap-small">
+          <div class="aboutme-detail-row" id="aboutme-description-sub1">
+            <img
+              class="aboutme-icon"
+              src="assets/icons/lamp.svg"
+              alt="Symbol einer Lampe"
+            />
+            <p
+              data-aos="fade-up"
+              [attr.data-aos-anchor]="'#aboutme-description-main'"
+            >
+              {{ "aboutMe.subDescription1" | translate }}
+            </p>
+          </div>
+
+          <div class="aboutme-detail-row" id="aboutme-description-sub2">
+            <img
+              class="aboutme-icon"
+              src="assets/icons/location.svg"
+              alt="Symbol für Standort"
+            />
+            <p
+              data-aos="fade-up"
+              [attr.data-aos-anchor]="'#aboutme-description-sub1'"
+            >
+              {{ "aboutMe.subDescription2" | translate }}
+            </p>
+          </div>
+
+          <div class="aboutme-detail-row" id="aboutme-description-sub3">
+            <img
+              class="aboutme-icon"
+              src="assets/icons/puzzle.svg"
+              alt="Symbol eines Puzzlestücks"
+            />
+            <p
+              data-aos="fade-up"
+              [attr.data-aos-anchor]="'#aboutme-description-sub2'"
+            >
+              {{ "aboutMe.subDescription3" | translate }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="aboutme-image-container">
+      <div class="aboutme-image-box">
+        <img
+          src="assets/img/me/sb.jpg"
+          alt="Portrait von Scheker Badjaj"
+          data-aos="zoom-in"
+          [attr.data-aos-anchor]="'#aboutme-description-sub2'"
+        />
+      </div>
+    </section>
+  </div>
+  <div
+    class="aboutme-divider"
+    data-aos="fade-right"
+    data-aos-delay="250"
+    [attr.data-aos-anchor]="'#aboutme-description-sub2'"
+  ></div>
+</main>
+<div class="aboutme-shadow" data-aos="fade" data-aos-delay="100">
+  <img
+    src="assets/img/background-objects/30. Purple shadow about me.svg"
+    alt="Dekorativer lila Schatten im Hintergrund"
+  />
+</div>

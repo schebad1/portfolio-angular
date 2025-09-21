@@ -1,0 +1,97 @@
+.portfolio-wrapper {
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  z-index: 1;
+  padding: 0 136px 32px;
+  position: relative;
+}
+
+.portfolio-heading {
+  background: rgb(20, 29, 47);
+  padding: 0 32px;
+}
+
+.portfolio-line {
+  right: 0;
+  top: 67.5px;
+  width: 75%;
+  height: 4px;
+  position: absolute;
+  background-color: rgba(151, 71, 255, 1);
+}
+
+.portfolio-title {
+  color: rgba(151, 71, 255, 1);
+}
+
+.portfolio-item {
+  margin-top: 80px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
+}
+
+.portfolio-item--reversed {
+  flex-direction: row-reverse;
+}
+
+.portfolio-image {
+  width: 100%;
+  max-width: 620px;
+}
+
+.portfolio-content {
+  width: 50%;
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+}
+
+.portfolio-skills {
+  color: rgba(112, 230, 28, 1);
+  font-size: 1.2rem;
+}
+
+.portfolio-buttons {
+  display: flex;
+  gap: 68px;
+}
+
+.portfolio-button {
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.portfolio-button--live {
+  color: #fff;
+  background-color: rgba(151, 71, 255, 1);
+}
+
+.portfolio-button--live:hover {
+  background-color: rgba(112, 230, 28, 1); 
+}
+
+.portfolio-button--github {
+  background-color: rgb(20, 29, 47);
+  outline: 2px solid rgba(112, 230, 28, 1);
+  color: #fff; 
+}
+
+.portfolio-button--github:hover {
+  background-color: rgba(112, 230, 28, 1);
+}
+
+.portfolio-decoration {
+  top: 15%;
+  left: 0;
+  width: 520px;
+  display: flex;
+  position: absolute;
+  overflow-x: hidden;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
