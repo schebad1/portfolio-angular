@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
@@ -8,14 +8,12 @@ import { TranslateModule } from '@ngx-translate/core';
   templateUrl: './imprint.component.html',
   styleUrl: './imprint.component.scss',
 })
-export class ImprintComponent implements OnInit {
+export class ImprintComponent implements AfterViewInit {
   constructor() {}
 
-  scroll(): void {
-    window.scrollTo({ top: 0 });
-  }
-
-  ngOnInit(): void {
-    this.scroll();
+  ngAfterViewInit(): void {
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 0);
   }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
@@ -8,14 +8,12 @@ import { TranslateModule } from '@ngx-translate/core';
   templateUrl: './legal-notice.component.html',
   styleUrl: './legal-notice.component.scss',
 })
-export class LegalNoticeComponent implements OnInit {
+export class LegalNoticeComponent implements AfterViewInit {
   constructor() {}
 
-  ngOnInit(): void {
-    this.scroll();
-  }
-
-  scroll(): void {
-    window.scrollTo({ top: 0 });
+  ngAfterViewInit(): void {
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 0);
   }
 }

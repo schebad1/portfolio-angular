@@ -1,8 +1,6 @@
-<IfModule mod_rewrite.c>
-  RewriteEngine On
-
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
-
-  RewriteRule ^ index.html [QSA,L]
-</IfModule>
+RewriteEngine On
+RewriteBase /portfolio-sb/
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+RewriteRule . /portfolio-sb/index.html [L]

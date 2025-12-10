@@ -44,8 +44,10 @@
             alt="Invalid"
           />
         </div>
-
-        <div *ngIf="name.invalid && (name.dirty || name.touched)" class="contact-alert">
+        <div
+          class="contact-alert"
+          [class.visible]="name.invalid && (name.dirty || name.touched)"
+        >
           <div *ngIf="name.errors?.['required']">
             {{ "contact.form.validation.nameRequired" | translate }}
           </div>
@@ -80,14 +82,15 @@
             alt="Invalid"
           />
         </div>
-
-        <div *ngIf="email.invalid && (email.dirty || email.touched)" class="contact-alert">
+        <div
+          class="contact-alert"
+          [class.visible]="email.invalid && (email.dirty || email.touched)"
+        >
           <div *ngIf="email.errors?.['required']">
             {{ "contact.form.validation.emailRequired" | translate }}
           </div>
           <div *ngIf="email.errors?.['pattern']">
             {{ "contact.form.validation.emailPattern" | translate }} <br />
-            {{ "contact.form.validation.emailPatternExample" | translate }}
           </div>
         </div>
         <div class="contact-input-row">
@@ -114,8 +117,10 @@
             alt="Invalid"
           />
         </div>
-
-        <div *ngIf="message.invalid && (message.dirty || message.touched)" class="contact-alert">
+        <div
+          class="contact-alert"
+          [class.visible]="message.invalid && (message.dirty || message.touched)"
+        >
           <div *ngIf="message.errors?.['required']">
             {{ "contact.form.validation.messageRequired" | translate }}
           </div>
@@ -134,14 +139,16 @@
           </div>
           <span class="contact-privacy-text">
             {{ "contact.form.checkboxBeforLinkText" | translate }}
-            <a [routerLink]="['/legal-notice']">
+            <a [routerLink]="['/legal-notice']" class="contact-privacy-link">
               {{ "contact.form.privacyPolice" | translate }}
             </a>
             {{ "contact.form.checkboxAfterLinkText" | translate }}
           </span>
         </div>
-
-        <div *ngIf="checkbox.invalid && (checkbox.dirty || checkbox.touched)" class="contact-alert">
+        <div
+          class="contact-alert"
+          [class.visible]="checkbox.invalid && (checkbox.dirty || checkbox.touched)"
+        >
           <div *ngIf="checkbox?.errors?.['required']">
             {{ "contact.form.validation.privacyRequired" | translate }}
           </div>
@@ -149,10 +156,12 @@
         <button type="submit" class="contact-submit" [disabled]="!contactForm.valid">
           {{ "contact.form.button" | translate }}
         </button>
-<span class="contact-success" [ngClass]="{ show: mailSent }">
-  {{ "contact.succesMsg" | translate }}!
-</span>
+
+        <span class="contact-success" [ngClass]="{ show: mailSent }">
+          {{ "contact.succesMsg" | translate }}!
+        </span>
       </form>
+
       <button class="contact-scrollup" (click)="scroll()">
         <img
           src="assets/icons/navigation/up.png"

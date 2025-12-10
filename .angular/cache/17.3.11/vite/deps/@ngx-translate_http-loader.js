@@ -1,25 +1,23 @@
 import {
   HttpClient
-} from "./chunk-54SHLABH.js";
-import "./chunk-6IR4IWYE.js";
+} from "./chunk-PREW3OV3.js";
+import "./chunk-VBIE6LKH.js";
 import {
   Inject,
   Injectable,
   setClassMetadata,
   ɵɵdefineInjectable,
   ɵɵinject
-} from "./chunk-7SI44FZ4.js";
+} from "./chunk-M4XJ4RAE.js";
 import "./chunk-CO2UG7VT.js";
-import {
-  __publicField
-} from "./chunk-NXARLJA5.js";
+import "./chunk-WKYGNSYM.js";
 
 // node_modules/@ngx-translate/http-loader/fesm2022/ngx-translate-http-loader.mjs
-var _TranslateHttpLoader = class _TranslateHttpLoader {
+var TranslateHttpLoader = class _TranslateHttpLoader {
+  http;
+  prefix;
+  suffix;
   constructor(http, prefix = "/assets/i18n/", suffix = ".json") {
-    __publicField(this, "http");
-    __publicField(this, "prefix");
-    __publicField(this, "suffix");
     this.http = http;
     this.prefix = prefix;
     this.suffix = suffix;
@@ -28,17 +26,16 @@ var _TranslateHttpLoader = class _TranslateHttpLoader {
    * Gets the translations from the server
    */
   getTranslation(lang) {
-    return this.http.get("".concat(this.prefix).concat(lang).concat(this.suffix));
+    return this.http.get(`${this.prefix}${lang}${this.suffix}`);
   }
+  static ɵfac = function TranslateHttpLoader_Factory(t) {
+    return new (t || _TranslateHttpLoader)(ɵɵinject(HttpClient), ɵɵinject(String), ɵɵinject(String));
+  };
+  static ɵprov = ɵɵdefineInjectable({
+    token: _TranslateHttpLoader,
+    factory: _TranslateHttpLoader.ɵfac
+  });
 };
-__publicField(_TranslateHttpLoader, "ɵfac", function TranslateHttpLoader_Factory(t) {
-  return new (t || _TranslateHttpLoader)(ɵɵinject(HttpClient), ɵɵinject(String), ɵɵinject(String));
-});
-__publicField(_TranslateHttpLoader, "ɵprov", ɵɵdefineInjectable({
-  token: _TranslateHttpLoader,
-  factory: _TranslateHttpLoader.ɵfac
-}));
-var TranslateHttpLoader = _TranslateHttpLoader;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(TranslateHttpLoader, [{
     type: Injectable

@@ -14,7 +14,7 @@
 .hero-background {
   margin-top: 146px;
   position: absolute;
-  z-index: -10;
+  z-index: -10;      
 }
 
 .hero-image-container {
@@ -135,8 +135,4 @@ main {
   gap: 36px;
 }
 
-.socials-wrapper {
-  > a:hover {
-    transform: scale(1.25) translateX(3px);
-  }
-}
+.social-links .social-row a:hover .social-icon { transform: scale(1.25) translate(4px, 4px); }

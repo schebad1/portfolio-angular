@@ -21,7 +21,8 @@
     "subtitle": "Eine Auswahl meiner Projekte – hier können Sie sich selbst ein Bild von meinen Fähigkeiten machen.",
     "joinDescription": "Task-Manager, inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben mit Drag-and-Drop-Funktionen, weise Benutzer und Kategorien zu.",
     "sharkieDescription": "Ein einfaches Jump-and-Run-Spiel auf objektorientierter Basis. Hilf Sharkie, Münzen und Giftflaschen zu sammeln, um gegen den Killerwal zu kämpfen.",
-    "pokedexDescription": "Basierend auf der PokéAPI – eine einfache Bibliothek, die Pokémon-Informationen bereitstellt und katalogisiert."
+    "pokedexDescription": "Basierend auf der PokéAPI – eine einfache Bibliothek, die Pokémon-Informationen bereitstellt und katalogisiert.",
+    "codeCuisineDescription": "Eine KI-gestützte Rezeptsuche, die dir auf Basis deiner vorhandenen Zutaten passende Gerichte vorschlägt. Spart Zeit, reduziert Lebensmittelverschwendung und bringt neue Ideen in den Alltag."
   },
   "contact": {
     "title": "Kontakt aufnehmen",

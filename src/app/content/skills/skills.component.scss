@@ -36,10 +36,6 @@
   }
 }
 
-.skill-label {
-  font-size: 14px;
-}
-
 .skill-image {
   aspect-ratio: 1;
   width: 60px;
@@ -81,7 +77,6 @@
   display: grid;
   align-items: center;
   position: relative;
-  min-height: calc(100vh - 99px);
   z-index: 10;
   max-width: 1920px;
   max-height: 100%;

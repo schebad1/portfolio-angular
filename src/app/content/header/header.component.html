@@ -1,12 +1,12 @@
 <header>
   <div class="wrapper max-size">
-    <a routerLink="" (click)="scrollToTopAction()">
+    <a routerLink="/" (click)="scrollToTopAction($event)">
       <h2>Scheker</h2>
     </a>
     <nav>
-      <a href="#about-me">{{ 'aboutMe.title' | translate }}</a>
-      <a href="#skills">{{ 'skills.title' | translate }}</a>
-      <a href="#portfolio">Portfolio</a>
+      <a (click)="navigateToSection('about-me', $event)">{{ 'aboutMe.title' | translate }}</a>
+      <a (click)="navigateToSection('skills', $event)">{{ 'skills.title' | translate }}</a>
+      <a (click)="navigateToSection('portfolio', $event)">Portfolio</a>
       <div class="row-block">
         <button
           (click)="setLanguageAction('de')"
@@ -36,9 +36,9 @@
 </header>
 <main [class.expand-height]="isOpen">
   <nav [class.expanded]="isOpen">
-    <a (click)="switchMenuState()" href="#about-me">{{ 'aboutMe.title' | translate }}</a>
-    <a (click)="switchMenuState()" href="#skills">{{ 'skills.title' | translate }}</a>
-    <a (click)="switchMenuState()" href="#portfolio">Portfolio</a>
+    <a (click)="navigateToSection('about-me', $event)">{{ 'aboutMe.title' | translate }}</a>
+    <a (click)="navigateToSection('skills', $event)">{{ 'skills.title' | translate }}</a>
+    <a (click)="navigateToSection('portfolio', $event)">Portfolio</a>
     <div class="lang-switcher">
       <button
         (click)="setLanguageAction('de'); switchMenuState()"

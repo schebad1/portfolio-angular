@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router'; 
 import { CommonModule } from '@angular/common';
 import { fromEvent, Subscription } from 'rxjs';
 
@@ -17,7 +17,10 @@ export class HeaderComponent implements OnInit {
   resizeSubscription!: Subscription;
   private storageKey = 'setLanguage';
 
-  constructor(private translate: TranslateService) {
+  constructor(
+    private translate: TranslateService,
+    private router: Router 
+  ) {
     const savedLang = localStorage.getItem(this.storageKey);
     const browserLang = this.translate.getBrowserLang();
     const initialLang = savedLang || (browserLang?.match(/de/) ? browserLang : 'en');
@@ -27,6 +30,32 @@ export class HeaderComponent implements OnInit {
 
     if (!savedLang) {
       localStorage.setItem(this.storageKey, initialLang);
+    }
+  }
+
+  navigateToSection(sectionId: string, event: Event): void {
+    event.preventDefault();
+    if (this.router.url === '/' || this.router.url.includes('#')) {
+      this.scrollToSection(sectionId);
+    } else {
+      this.router.navigate(['/']).then(() => {
+        setTimeout(() => {
+          this.scrollToSection(sectionId);
+        }, 100);
+      });
+    }
+    if (this.isOpen) {
+      this.switchMenuState();
+    }
+  }
+
+  private scrollToSection(sectionId: string): void {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ 
+        behavior: 'smooth', 
+        block: 'start' 
+      });
     }
   }
 
@@ -40,8 +69,15 @@ export class HeaderComponent implements OnInit {
     this.resizeSubscription = fromEvent(window, 'resize').subscribe(() => this.onResizeCheck());
   }
 
-  scrollToTopAction(): void {
-    window.scrollTo({ top: 0 });
+  scrollToTopAction(event: Event): void {
+    event.preventDefault(); 
+    this.router.navigate(['/']).then(() => {
+      this.scrollToTop();
+    });
+  }
+  
+  scrollToTop(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   onResizeCheck(): void {

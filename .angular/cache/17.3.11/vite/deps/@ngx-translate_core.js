@@ -19,7 +19,7 @@ import {
   ɵɵdirectiveInject,
   ɵɵgetInheritedFactory,
   ɵɵinject
-} from "./chunk-7SI44FZ4.js";
+} from "./chunk-M4XJ4RAE.js";
 import {
   concat,
   concatMap,
@@ -33,29 +33,27 @@ import {
   take
 } from "./chunk-CO2UG7VT.js";
 import {
-  __publicField,
   __spreadValues
-} from "./chunk-NXARLJA5.js";
+} from "./chunk-WKYGNSYM.js";
 
 // node_modules/@ngx-translate/core/fesm2022/ngx-translate-core.mjs
 var TranslateLoader = class {
 };
-var _TranslateFakeLoader = class _TranslateFakeLoader extends TranslateLoader {
+var TranslateFakeLoader = class _TranslateFakeLoader extends TranslateLoader {
   getTranslation(lang) {
     return of({});
   }
+  static ɵfac = /* @__PURE__ */ (() => {
+    let ɵTranslateFakeLoader_BaseFactory;
+    return function TranslateFakeLoader_Factory(t) {
+      return (ɵTranslateFakeLoader_BaseFactory || (ɵTranslateFakeLoader_BaseFactory = ɵɵgetInheritedFactory(_TranslateFakeLoader)))(t || _TranslateFakeLoader);
+    };
+  })();
+  static ɵprov = ɵɵdefineInjectable({
+    token: _TranslateFakeLoader,
+    factory: _TranslateFakeLoader.ɵfac
+  });
 };
-__publicField(_TranslateFakeLoader, "ɵfac", /* @__PURE__ */ (() => {
-  let ɵTranslateFakeLoader_BaseFactory;
-  return function TranslateFakeLoader_Factory(t) {
-    return (ɵTranslateFakeLoader_BaseFactory || (ɵTranslateFakeLoader_BaseFactory = ɵɵgetInheritedFactory(_TranslateFakeLoader)))(t || _TranslateFakeLoader);
-  };
-})());
-__publicField(_TranslateFakeLoader, "ɵprov", ɵɵdefineInjectable({
-  token: _TranslateFakeLoader,
-  factory: _TranslateFakeLoader.ɵfac
-}));
-var TranslateFakeLoader = _TranslateFakeLoader;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(TranslateFakeLoader, [{
     type: Injectable
@@ -63,19 +61,18 @@ var TranslateFakeLoader = _TranslateFakeLoader;
 })();
 var MissingTranslationHandler = class {
 };
-var _FakeMissingTranslationHandler = class _FakeMissingTranslationHandler {
+var FakeMissingTranslationHandler = class _FakeMissingTranslationHandler {
   handle(params) {
     return params.key;
   }
+  static ɵfac = function FakeMissingTranslationHandler_Factory(t) {
+    return new (t || _FakeMissingTranslationHandler)();
+  };
+  static ɵprov = ɵɵdefineInjectable({
+    token: _FakeMissingTranslationHandler,
+    factory: _FakeMissingTranslationHandler.ɵfac
+  });
 };
-__publicField(_FakeMissingTranslationHandler, "ɵfac", function FakeMissingTranslationHandler_Factory(t) {
-  return new (t || _FakeMissingTranslationHandler)();
-});
-__publicField(_FakeMissingTranslationHandler, "ɵprov", ɵɵdefineInjectable({
-  token: _FakeMissingTranslationHandler,
-  factory: _FakeMissingTranslationHandler.ɵfac
-}));
-var FakeMissingTranslationHandler = _FakeMissingTranslationHandler;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(FakeMissingTranslationHandler, [{
     type: Injectable
@@ -197,11 +194,8 @@ function setValue(target, key, value) {
 }
 var TranslateParser = class {
 };
-var _TranslateDefaultParser = class _TranslateDefaultParser extends TranslateParser {
-  constructor() {
-    super(...arguments);
-    __publicField(this, "templateMatcher", /{{\s?([^{}\s]*)\s?}}/g);
-  }
+var TranslateDefaultParser = class _TranslateDefaultParser extends TranslateParser {
+  templateMatcher = /{{\s?([^{}\s]*)\s?}}/g;
   interpolate(expr, params) {
     if (isString(expr)) {
       return this.interpolateString(expr, params);
@@ -222,18 +216,17 @@ var _TranslateDefaultParser = class _TranslateDefaultParser extends TranslatePar
       return isDefined(r) ? r : substring;
     });
   }
+  static ɵfac = /* @__PURE__ */ (() => {
+    let ɵTranslateDefaultParser_BaseFactory;
+    return function TranslateDefaultParser_Factory(t) {
+      return (ɵTranslateDefaultParser_BaseFactory || (ɵTranslateDefaultParser_BaseFactory = ɵɵgetInheritedFactory(_TranslateDefaultParser)))(t || _TranslateDefaultParser);
+    };
+  })();
+  static ɵprov = ɵɵdefineInjectable({
+    token: _TranslateDefaultParser,
+    factory: _TranslateDefaultParser.ɵfac
+  });
 };
-__publicField(_TranslateDefaultParser, "ɵfac", /* @__PURE__ */ (() => {
-  let ɵTranslateDefaultParser_BaseFactory;
-  return function TranslateDefaultParser_Factory(t) {
-    return (ɵTranslateDefaultParser_BaseFactory || (ɵTranslateDefaultParser_BaseFactory = ɵɵgetInheritedFactory(_TranslateDefaultParser)))(t || _TranslateDefaultParser);
-  };
-})());
-__publicField(_TranslateDefaultParser, "ɵprov", ɵɵdefineInjectable({
-  token: _TranslateDefaultParser,
-  factory: _TranslateDefaultParser.ɵfac
-}));
-var TranslateDefaultParser = _TranslateDefaultParser;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(TranslateDefaultParser, [{
     type: Injectable
@@ -241,70 +234,67 @@ var TranslateDefaultParser = _TranslateDefaultParser;
 })();
 var TranslateCompiler = class {
 };
-var _TranslateFakeCompiler = class _TranslateFakeCompiler extends TranslateCompiler {
+var TranslateFakeCompiler = class _TranslateFakeCompiler extends TranslateCompiler {
   compile(value, lang) {
     return value;
   }
   compileTranslations(translations, lang) {
     return translations;
   }
+  static ɵfac = /* @__PURE__ */ (() => {
+    let ɵTranslateFakeCompiler_BaseFactory;
+    return function TranslateFakeCompiler_Factory(t) {
+      return (ɵTranslateFakeCompiler_BaseFactory || (ɵTranslateFakeCompiler_BaseFactory = ɵɵgetInheritedFactory(_TranslateFakeCompiler)))(t || _TranslateFakeCompiler);
+    };
+  })();
+  static ɵprov = ɵɵdefineInjectable({
+    token: _TranslateFakeCompiler,
+    factory: _TranslateFakeCompiler.ɵfac
+  });
 };
-__publicField(_TranslateFakeCompiler, "ɵfac", /* @__PURE__ */ (() => {
-  let ɵTranslateFakeCompiler_BaseFactory;
-  return function TranslateFakeCompiler_Factory(t) {
-    return (ɵTranslateFakeCompiler_BaseFactory || (ɵTranslateFakeCompiler_BaseFactory = ɵɵgetInheritedFactory(_TranslateFakeCompiler)))(t || _TranslateFakeCompiler);
-  };
-})());
-__publicField(_TranslateFakeCompiler, "ɵprov", ɵɵdefineInjectable({
-  token: _TranslateFakeCompiler,
-  factory: _TranslateFakeCompiler.ɵfac
-}));
-var TranslateFakeCompiler = _TranslateFakeCompiler;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(TranslateFakeCompiler, [{
     type: Injectable
   }], null, null);
 })();
 var TranslateStore = class {
-  constructor() {
-    /**
-     * The default lang to fallback when translations are missing on the current lang
-     */
-    __publicField(this, "defaultLang");
-    /**
-     * The lang currently used
-     */
-    __publicField(this, "currentLang", this.defaultLang);
-    /**
-     * a list of translations per lang
-     */
-    __publicField(this, "translations", {});
-    /**
-     * an array of langs
-     */
-    __publicField(this, "langs", []);
-    /**
-     * An EventEmitter to listen to translation change events
-     * onTranslationChange.subscribe((params: TranslationChangeEvent) => {
-       *     // do something
-       * });
-     */
-    __publicField(this, "onTranslationChange", new EventEmitter());
-    /**
-     * An EventEmitter to listen to lang change events
-     * onLangChange.subscribe((params: LangChangeEvent) => {
-       *     // do something
-       * });
-     */
-    __publicField(this, "onLangChange", new EventEmitter());
-    /**
-     * An EventEmitter to listen to default lang change events
-     * onDefaultLangChange.subscribe((params: DefaultLangChangeEvent) => {
-       *     // do something
-       * });
-     */
-    __publicField(this, "onDefaultLangChange", new EventEmitter());
-  }
+  /**
+   * The default lang to fallback when translations are missing on the current lang
+   */
+  defaultLang;
+  /**
+   * The lang currently used
+   */
+  currentLang = this.defaultLang;
+  /**
+   * a list of translations per lang
+   */
+  translations = {};
+  /**
+   * an array of langs
+   */
+  langs = [];
+  /**
+   * An EventEmitter to listen to translation change events
+   * onTranslationChange.subscribe((params: TranslationChangeEvent) => {
+     *     // do something
+     * });
+   */
+  onTranslationChange = new EventEmitter();
+  /**
+   * An EventEmitter to listen to lang change events
+   * onLangChange.subscribe((params: LangChangeEvent) => {
+     *     // do something
+     * });
+   */
+  onLangChange = new EventEmitter();
+  /**
+   * An EventEmitter to listen to default lang change events
+   * onDefaultLangChange.subscribe((params: DefaultLangChangeEvent) => {
+     *     // do something
+     * });
+   */
+  onDefaultLangChange = new EventEmitter();
 };
 var ISOLATE_TRANSLATE_SERVICE = new InjectionToken("ISOLATE_TRANSLATE_SERVICE");
 var USE_DEFAULT_LANG = new InjectionToken("USE_DEFAULT_LANG");
@@ -313,45 +303,18 @@ var USE_EXTEND = new InjectionToken("USE_EXTEND");
 var makeObservable = (value) => {
   return isObservable(value) ? value : of(value);
 };
-var _TranslateService = class _TranslateService {
-  /**
-   *
-   * @param store an instance of the store (that is supposed to be unique)
-   * @param currentLoader An instance of the loader currently used
-   * @param compiler An instance of the compiler currently used
-   * @param parser An instance of the parser currently used
-   * @param missingTranslationHandler A handler for missing translations.
-   * @param useDefaultLang whether we should use default language translation when current language translation is missing.
-   * @param isolate whether this service should use the store or not
-   * @param extend To make a child module extend (and use) translations from parent modules.
-   * @param defaultLanguage Set the default language using configuration
-   */
-  constructor(store, currentLoader, compiler, parser, missingTranslationHandler, useDefaultLang = true, isolate = false, extend = false, defaultLanguage) {
-    __publicField(this, "store");
-    __publicField(this, "currentLoader");
-    __publicField(this, "compiler");
-    __publicField(this, "parser");
-    __publicField(this, "missingTranslationHandler");
-    __publicField(this, "useDefaultLang");
-    __publicField(this, "extend");
-    __publicField(this, "loadingTranslations");
-    __publicField(this, "pending", false);
-    __publicField(this, "_translationRequests", {});
-    __publicField(this, "lastUseLanguage", null);
-    this.store = store;
-    this.currentLoader = currentLoader;
-    this.compiler = compiler;
-    this.parser = parser;
-    this.missingTranslationHandler = missingTranslationHandler;
-    this.useDefaultLang = useDefaultLang;
-    this.extend = extend;
-    if (isolate) {
-      this.store = new TranslateStore();
-    }
-    if (defaultLanguage) {
-      this.setDefaultLang(defaultLanguage);
-    }
-  }
+var TranslateService = class _TranslateService {
+  store;
+  currentLoader;
+  compiler;
+  parser;
+  missingTranslationHandler;
+  useDefaultLang;
+  extend;
+  loadingTranslations;
+  pending = false;
+  _translationRequests = {};
+  lastUseLanguage = null;
   /**
    * An EventEmitter to listen to translation change events
    * onTranslationChange.subscribe((params: TranslationChangeEvent) => {
@@ -414,6 +377,33 @@ var _TranslateService = class _TranslateService {
   }
   set translations(translations) {
     this.store.translations = translations;
+  }
+  /**
+   *
+   * @param store an instance of the store (that is supposed to be unique)
+   * @param currentLoader An instance of the loader currently used
+   * @param compiler An instance of the compiler currently used
+   * @param parser An instance of the parser currently used
+   * @param missingTranslationHandler A handler for missing translations.
+   * @param useDefaultLang whether we should use default language translation when current language translation is missing.
+   * @param isolate whether this service should use the store or not
+   * @param extend To make a child module extend (and use) translations from parent modules.
+   * @param defaultLanguage Set the default language using configuration
+   */
+  constructor(store, currentLoader, compiler, parser, missingTranslationHandler, useDefaultLang = true, isolate = false, extend = false, defaultLanguage) {
+    this.store = store;
+    this.currentLoader = currentLoader;
+    this.compiler = compiler;
+    this.parser = parser;
+    this.missingTranslationHandler = missingTranslationHandler;
+    this.useDefaultLang = useDefaultLang;
+    this.extend = extend;
+    if (isolate) {
+      this.store = new TranslateStore();
+    }
+    if (defaultLanguage) {
+      this.setDefaultLang(defaultLanguage);
+    }
   }
   /**
    * Sets the default language to use as a fallback
@@ -621,7 +611,7 @@ var _TranslateService = class _TranslateService {
    */
   get(key, interpolateParams) {
     if (!isDefined(key) || !key.length) {
-      throw new Error('Parameter "key" is required and cannot be empty');
+      throw new Error(`Parameter "key" is required and cannot be empty`);
     }
     if (this.pending) {
       return this.loadingTranslations.pipe(concatMap((res) => {
@@ -637,7 +627,7 @@ var _TranslateService = class _TranslateService {
    */
   getStreamOnTranslationChange(key, interpolateParams) {
     if (!isDefined(key) || !key.length) {
-      throw new Error('Parameter "key" is required and cannot be empty');
+      throw new Error(`Parameter "key" is required and cannot be empty`);
     }
     return concat(defer(() => this.get(key, interpolateParams)), this.onTranslationChange.pipe(switchMap((event) => {
       const res = this.getParsedResult(event.translations, key, interpolateParams);
@@ -651,7 +641,7 @@ var _TranslateService = class _TranslateService {
    */
   stream(key, interpolateParams) {
     if (!isDefined(key) || !key.length) {
-      throw new Error('Parameter "key" required');
+      throw new Error(`Parameter "key" required`);
     }
     return concat(defer(() => this.get(key, interpolateParams)), this.onLangChange.pipe(switchMap((event) => {
       const res = this.getParsedResult(event.translations, key, interpolateParams);
@@ -733,16 +723,15 @@ var _TranslateService = class _TranslateService {
     }
     return window.navigator.languages ? window.navigator.languages[0] : window.navigator.language || window.navigator.browserLanguage || window.navigator.userLanguage;
   }
+  static ɵfac = function TranslateService_Factory(t) {
+    return new (t || _TranslateService)(ɵɵinject(TranslateStore), ɵɵinject(TranslateLoader), ɵɵinject(TranslateCompiler), ɵɵinject(TranslateParser), ɵɵinject(MissingTranslationHandler), ɵɵinject(USE_DEFAULT_LANG), ɵɵinject(ISOLATE_TRANSLATE_SERVICE), ɵɵinject(USE_EXTEND), ɵɵinject(DEFAULT_LANGUAGE));
+  };
+  static ɵprov = ɵɵdefineInjectable({
+    token: _TranslateService,
+    factory: _TranslateService.ɵfac,
+    providedIn: "root"
+  });
 };
-__publicField(_TranslateService, "ɵfac", function TranslateService_Factory(t) {
-  return new (t || _TranslateService)(ɵɵinject(TranslateStore), ɵɵinject(TranslateLoader), ɵɵinject(TranslateCompiler), ɵɵinject(TranslateParser), ɵɵinject(MissingTranslationHandler), ɵɵinject(USE_DEFAULT_LANG), ɵɵinject(ISOLATE_TRANSLATE_SERVICE), ɵɵinject(USE_EXTEND), ɵɵinject(DEFAULT_LANGUAGE));
-});
-__publicField(_TranslateService, "ɵprov", ɵɵdefineInjectable({
-  token: _TranslateService,
-  factory: _TranslateService.ɵfac,
-  providedIn: "root"
-}));
-var TranslateService = _TranslateService;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(TranslateService, [{
     type: Injectable,
@@ -785,17 +774,29 @@ var TranslateService = _TranslateService;
     }]
   }], null);
 })();
-var _TranslateDirective = class _TranslateDirective {
+var TranslateDirective = class _TranslateDirective {
+  translateService;
+  element;
+  _ref;
+  key;
+  lastParams;
+  currentParams;
+  onLangChangeSub;
+  onDefaultLangChangeSub;
+  onTranslationChangeSub;
+  set translate(key) {
+    if (key) {
+      this.key = key;
+      this.checkNodes();
+    }
+  }
+  set translateParams(params) {
+    if (!equals(this.currentParams, params)) {
+      this.currentParams = params;
+      this.checkNodes(true);
+    }
+  }
   constructor(translateService, element, _ref) {
-    __publicField(this, "translateService");
-    __publicField(this, "element");
-    __publicField(this, "_ref");
-    __publicField(this, "key");
-    __publicField(this, "lastParams");
-    __publicField(this, "currentParams");
-    __publicField(this, "onLangChangeSub");
-    __publicField(this, "onDefaultLangChangeSub");
-    __publicField(this, "onTranslationChangeSub");
     this.translateService = translateService;
     this.element = element;
     this._ref = _ref;
@@ -815,18 +816,6 @@ var _TranslateDirective = class _TranslateDirective {
       this.onDefaultLangChangeSub = this.translateService.onDefaultLangChange.subscribe((event) => {
         this.checkNodes(true);
       });
-    }
-  }
-  set translate(key) {
-    if (key) {
-      this.key = key;
-      this.checkNodes();
-    }
-  }
-  set translateParams(params) {
-    if (!equals(this.currentParams, params)) {
-      this.currentParams = params;
-      this.checkNodes(true);
     }
   }
   ngAfterViewChecked() {
@@ -918,20 +907,19 @@ var _TranslateDirective = class _TranslateDirective {
       this.onTranslationChangeSub.unsubscribe();
     }
   }
+  static ɵfac = function TranslateDirective_Factory(t) {
+    return new (t || _TranslateDirective)(ɵɵdirectiveInject(TranslateService), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(ChangeDetectorRef));
+  };
+  static ɵdir = ɵɵdefineDirective({
+    type: _TranslateDirective,
+    selectors: [["", "translate", ""], ["", "ngx-translate", ""]],
+    inputs: {
+      translate: "translate",
+      translateParams: "translateParams"
+    },
+    standalone: true
+  });
 };
-__publicField(_TranslateDirective, "ɵfac", function TranslateDirective_Factory(t) {
-  return new (t || _TranslateDirective)(ɵɵdirectiveInject(TranslateService), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(ChangeDetectorRef));
-});
-__publicField(_TranslateDirective, "ɵdir", ɵɵdefineDirective({
-  type: _TranslateDirective,
-  selectors: [["", "translate", ""], ["", "ngx-translate", ""]],
-  inputs: {
-    translate: "translate",
-    translateParams: "translateParams"
-  },
-  standalone: true
-}));
-var TranslateDirective = _TranslateDirective;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(TranslateDirective, [{
     type: Directive,
@@ -955,16 +943,16 @@ var TranslateDirective = _TranslateDirective;
     }]
   });
 })();
-var _TranslatePipe = class _TranslatePipe {
+var TranslatePipe = class _TranslatePipe {
+  translate;
+  _ref;
+  value = "";
+  lastKey = null;
+  lastParams = [];
+  onTranslationChange;
+  onLangChange;
+  onDefaultLangChange;
   constructor(translate, _ref) {
-    __publicField(this, "translate");
-    __publicField(this, "_ref");
-    __publicField(this, "value", "");
-    __publicField(this, "lastKey", null);
-    __publicField(this, "lastParams", []);
-    __publicField(this, "onTranslationChange");
-    __publicField(this, "onLangChange");
-    __publicField(this, "onDefaultLangChange");
     this.translate = translate;
     this._ref = _ref;
   }
@@ -999,7 +987,7 @@ var _TranslatePipe = class _TranslatePipe {
         try {
           interpolateParams = JSON.parse(validArgs);
         } catch (e) {
-          throw new SyntaxError("Wrong parameter in TranslatePipe. Expected a valid Object, received: ".concat(args[0]));
+          throw new SyntaxError(`Wrong parameter in TranslatePipe. Expected a valid Object, received: ${args[0]}`);
         }
       } else if (isDict(args[0])) {
         interpolateParams = args[0];
@@ -1055,21 +1043,20 @@ var _TranslatePipe = class _TranslatePipe {
   ngOnDestroy() {
     this._dispose();
   }
+  static ɵfac = function TranslatePipe_Factory(t) {
+    return new (t || _TranslatePipe)(ɵɵdirectiveInject(TranslateService, 16), ɵɵdirectiveInject(ChangeDetectorRef, 16));
+  };
+  static ɵpipe = ɵɵdefinePipe({
+    name: "translate",
+    type: _TranslatePipe,
+    pure: false,
+    standalone: true
+  });
+  static ɵprov = ɵɵdefineInjectable({
+    token: _TranslatePipe,
+    factory: _TranslatePipe.ɵfac
+  });
 };
-__publicField(_TranslatePipe, "ɵfac", function TranslatePipe_Factory(t) {
-  return new (t || _TranslatePipe)(ɵɵdirectiveInject(TranslateService, 16), ɵɵdirectiveInject(ChangeDetectorRef, 16));
-});
-__publicField(_TranslatePipe, "ɵpipe", ɵɵdefinePipe({
-  name: "translate",
-  type: _TranslatePipe,
-  pure: false,
-  standalone: true
-}));
-__publicField(_TranslatePipe, "ɵprov", ɵɵdefineInjectable({
-  token: _TranslatePipe,
-  factory: _TranslatePipe.ɵfac
-}));
-var TranslatePipe = _TranslatePipe;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(TranslatePipe, [{
     type: Injectable
@@ -1117,7 +1104,7 @@ var provideTranslateService = (config = {}) => {
     useValue: config.defaultLanguage
   }, TranslateService]);
 };
-var _TranslateModule = class _TranslateModule {
+var TranslateModule = class _TranslateModule {
   /**
    * Use this method in your root module to provide the TranslateService
    */
@@ -1184,17 +1171,16 @@ var _TranslateModule = class _TranslateModule {
       }, TranslateService]
     };
   }
+  static ɵfac = function TranslateModule_Factory(t) {
+    return new (t || _TranslateModule)();
+  };
+  static ɵmod = ɵɵdefineNgModule({
+    type: _TranslateModule,
+    imports: [TranslatePipe, TranslateDirective],
+    exports: [TranslatePipe, TranslateDirective]
+  });
+  static ɵinj = ɵɵdefineInjector({});
 };
-__publicField(_TranslateModule, "ɵfac", function TranslateModule_Factory(t) {
-  return new (t || _TranslateModule)();
-});
-__publicField(_TranslateModule, "ɵmod", ɵɵdefineNgModule({
-  type: _TranslateModule,
-  imports: [TranslatePipe, TranslateDirective],
-  exports: [TranslatePipe, TranslateDirective]
-}));
-__publicField(_TranslateModule, "ɵinj", ɵɵdefineInjector({}));
-var TranslateModule = _TranslateModule;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(TranslateModule, [{
     type: NgModule,

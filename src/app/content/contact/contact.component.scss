@@ -131,6 +131,7 @@ textarea {
 input,
 textarea {
   width: 100%;
+  font-family: inherit;
   border-radius: 8px;
   font-size: 1rem;
   outline: none;
@@ -218,4 +219,17 @@ textarea {
   100% {
     opacity: 1;
   }
+}
+
+.contact-alert {
+  min-height: 25px;   
+  visibility: hidden;  
+}
+
+.contact-alert.visible {
+  visibility: visible; 
+}
+
+.contact-privacy-link {
+  color: rgba(151, 71, 255, 1); 
 }

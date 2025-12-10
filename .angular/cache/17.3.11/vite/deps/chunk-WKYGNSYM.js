@@ -7,7 +7,7 @@ var __hasOwnProp = Object.prototype.hasOwnProperty;
 var __propIsEnum = Object.prototype.propertyIsEnumerable;
 var __defNormalProp = (obj, key, value) => key in obj ? __defProp(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
 var __spreadValues = (a, b) => {
-  for (var prop in b || (b = {}))
+  for (var prop in b ||= {})
     if (__hasOwnProp.call(b, prop))
       __defNormalProp(a, prop, b[prop]);
   if (__getOwnPropSymbols)
@@ -32,10 +32,6 @@ var __objRest = (source, exclude) => {
 };
 var __commonJS = (cb, mod) => function __require() {
   return mod || (0, cb[__getOwnPropNames(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
-};
-var __publicField = (obj, key, value) => {
-  __defNormalProp(obj, typeof key !== "symbol" ? key + "" : key, value);
-  return value;
 };
 var __async = (__this, __arguments, generator) => {
   return new Promise((resolve, reject) => {
@@ -63,7 +59,6 @@ export {
   __spreadProps,
   __objRest,
   __commonJS,
-  __publicField,
   __async
 };
-//# sourceMappingURL=chunk-NXARLJA5.js.map
+//# sourceMappingURL=chunk-WKYGNSYM.js.map
